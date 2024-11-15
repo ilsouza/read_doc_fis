@@ -1,0 +1,1984 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FAA17E2A-7BD3-4D41-A8A8-D95EBC6B590A}</ProjectGuid>
+        <ProjectVersion>19.5</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <MainSource>qualiBase.dpr</MainSource>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <TMSWebProject>2</TMSWebProject>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
+        <SanitizedProjectName>qualiBase</SanitizedProjectName>
+        <FeatureFilesAdded>Interbase;DB2;Firebird;SQLite;&quot;Interbase;DB2;Firebird;SQLite&quot;</FeatureFilesAdded>
+        <TMSWebHTMLFile>qualiBase.html</TMSWebHTMLFile>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_UsePackage>dxPSdxSpreadSheetLnkRS28;TMSmCLPkgDXE14;CData.Couchbase.D28;CData.Facebook.D28;CData.MSTeams.D28;bindengine;IndyIPCommon;vclie;CData.Salesforce.D28;aurelius;FMX_FlexCel_Components;dxPSPrVwRibbonRS28;dxHttpIndyRequestRS28;CData.Basecamp.D28;dxPSdxDBOCLnkRS28;dbxcds;vcledge;cxPivotGridOLAPRS28;dxGDIPlusRS28;CData.ApacheHBase.D28;CData.YouTubeAnalytics.D28;CData.Twitter.D28;FlexCel_Pdf;CData.SageBCAccounting.D28;dxCoreRS28;JvAppFrm;dxPSCoreRS28;dxSkinsCoreRS28;CData.GoogleBigQuery.D28;TMSScripter_IDE;JclVcl;dxADOServerModeRS28;dxWizardControlRS28;CData.BullhornCRM.D28;dbexpress;Jcl;JvManagedThreads;CData.SalesforceChatter.D28;inet;CData.JIRA.D28;vcltouch;PythonVcl;TMSFMXPackPkgDXE14;FMX_FlexCel_Core;FireDACDBXDriver;TMSWEBCorePkgDXE14;dxSpreadSheetCoreDialogsRS28;dxPScxCommonRS28;tmsbcl;dxNavBarRS28;CustomIPTransport;FireDACMSSQLDriver;JvSystem;VCL_FlexCel_Core;dxSpreadSheetReportDesignerRS28;dxFireDACEMFRS28;CData.OneNote.D28;JvCrypt;dxComnRS28;dxFlowChartDesignerRS28;CData.Cassandra.D28;CData.Tally.D28;CData.RSS.D28;FMXTMSFNCUIPackPkgDXE14;TMSCloudPkgDXE14;dxmdsRS28;CData.Dropbox.D28;dxPScxSchedulerLnkRS28;CData.ZohoBooks.D28;vclFireDAC;FMXAppWizard;vacommpkgdXE14;FireDACODBCDriver;dxADOEMFRS28;emsserverresource;CData.Instagram.D28;CData.Zendesk.D28;rtl;dxDockingRS28;IcsFmxD110Run;dxPDFViewerRS28;TMSVCLSecuritySystemPkgCoreDXE14;frce;IcsVclD110Run;DBXSqliteDriver;dxBarExtItemsRS28;VirtualTreesDR;dxorgcRS28;DBXSybaseASEDriver;CData.AmazonS3.D28;JvRuntimeDesign;JvXPCtrls;dxPSRichEditControlLnkRS28;CData.BigCommerce.D28;inetdbxpress;FireDAC;JvDocking;TMSFMXCloudPackPkgDXE14;xmlrtl;CData.GoogleDirectory.D28;ibxpress;dsnap;JvCmp;FireDACDb2Driver;TMSiCLPkgDXE14;DBXOracleDriver;CData.Airtable.D28;cxSchedulerRibbonStyleEventEditorRS28;dclTMSQueryStudio;vclib;dxPScxPCProdRS28;DatasnapConnectorsFreePascal;Spring.Data;CData.Highrise.D28;CData.SFTP.D28;FixInsight_11;CData.Trello.D28;TMSLogging;CData.LinkedIn.D28;sparkle;FMXTMSFNCMapsPkgDXE14;dxRichEditDocumentModelRS28;dxPSdxMapControlLnkRS28;TMSCloudPkgDEDXE14;dxPScxPivotGridLnkRS28;CData.Bugzilla.D28;dxCloudServiceLibraryRS28;cxLibraryRS28;bindcompvclwinx;VCLTMSFNCUIPackPkgDXE14;bindcompfmx;TMSVCLMultiTouchSDKPkgDXE14;VCLTMSFNCDashboardPackPkgDXE14;JvBands;CData.FinancialForce.D28;TMSVCLUIPackPkgDXE14;dxPSdxPDFViewerLnkRS28;dxSpreadSheetCoreRS28;ibmonitor;CData.Asana.D28;CData.OpenExchangeRates.D28;FireDACASADriver;Tee;vclactnband;TMSScripter;CData.JSON.D28;FMXTMSFNCWXPackPkgDXE14;dxFireDACServerModeRS28;FireDACInfxDriver;DBXMySQLDriver;VclSmp;AWSSDK;DataSnapCommon;CData.Xero.D28;fmxase;VCLTMSFNCMapsPkgDXE14;dxdbtrRS28;JvPluginSystem;TMSFMXCloudPackPkgDEDXE14;CData.ExcelOnline.D28;TMSDiagram;FlexCel_XlsAdapter;CData.QuickBooksOnline.D28;DataSnapIndy10ServerTransport;JclDeveloperTools;FMXTMSFNCDashboardPackPkgDXE14;DBXInterBaseDriver;vcldsnap;JvWizards;CData.PayPal.D28;dxSpreadSheetConditionalFormattingDialogsRS28;CData.AmazonMarketplace.D28;VCLTMSFNCCorePkgDXE14;vcldb;dxDBXServerModeRS28;CData.AzureTables.D28;CData.Redis.D28;CData.AuthorizeNet.D28;dxPScxExtCommonRS28;JvCore;dxRichEditControlCoreRS28;CData.MariaDB.D28;CData.Bing.D28;CData.DigitalOcean.D28;cxPivotGridChartRS28;CData.SurveyMonkey.D28;cxTreeListdxBarPopupMenuRS28;CData.Kintone.D28;JvDotNetCtrls;vcl;CData.AWSCostExplorer.D28;JvHMI;TMSScripter_Legacy;DataSnapClient;cxSchedulerWebServiceStorageRS28;dxtrmdRS28;CData.Odoo.D28;CData.GoogleDrive.D28;dxPSdxGaugeControlLnkRS28;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;JvPrintPreview;TMSAnalyticsPkgDXE14;tethering;JvStdCtrls;CData.FreshDesk.D28;bindcompvcl;dxEMFRS28;CloudService;CData.Stripe.D28;PythonFmx;soapserver;FireDACIBDriver;DataSnapServer;vclwinx;CData.OracleOci.D28;fmx;DbxCommonDriver;VCLRESTComponents;CData.EdgarOnline.D28;cxExportRS28;FireDACCommonODBC;DBXMSSQLDriver;emsclient;dxTileControlRS28;IndyProtocols;appanalytics;vclx;Skia.Package.RTL;CData.Quandl.D28;FmxTeeUI;vacommpkgdedXE14;AdvChartDEDXE14;DBXFirebirdDriver;SynEdit_R;cxPivotGridRS28;SKIA_FlexCel_Core;FireDACSqliteDriver;DbxClientDriver;dxSpreadSheetRS28;soapmidas;dxBarRS28;dxSpreadSheetInplaceRichEditRS28;TeeUI;Python;CData.XML.D28;dxServerModeRS28;VCLTMSFNCCloudPackPkgDXE14;cxTreeListRS28;CData.MongoDB.D28;FlexCel_dll;TMSWEBCorePkgLibDXE14;dxBarDBNavRS28;GLibWMI;JvDB;CData.Confluence.D28;CData.CSV.D28;fmxdae;FMXTMSFNCBloxPkgDXE14;JvCustom;TMSMQTTPkgDEDXE14;CData.OneDrive.D28;CData.Email.D28;CData.Access.D28;JvControls;TMSQueryStudio;CData.DocuSign.D28;CData.OData.D28;JvJans;JvMM;IndySystem;cxVerticalGridRS28;TMSVCLGUIMotionsPkgDXE14;TMSVCLSecuritySystemPkgUIDXE14;JvGlobus;VCLTMSFNCChartPkgDXE14;ibxbindings;dxPSDBTeeChartRS28;dxPSdxOCLnkRS28;CData.MYOB.D28;dxRichEditControlRS28;FMXTMSFNCChartPkgDXE14;JclContainers;cxSchedulerGridRS28;dxPsPrVwAdvRS28;VCLTMSFNCAppToolsPkgDXE14;JvPageComps;TMSPassKitPkgDXE14;FMXTMSFNCCorePkgDXE14;FlexCel_Render;FireDACCommon;DataSnapServerMidas;CData.CosmosDB.D28;dxPSdxDBTVLnkRS28;CData.GoogleCalendar.D28;dxRibbonCustomizationFormRS28;TMSScripter_VCL;bindcompdbx;dxGaugeControlRS28;FireDACMySQLDriver;CData.Evernote.D28;TMSMemInsightPkgDXE14;VCL_FlexCel_Components;remotedb;CData.SendGrid.D28;CData.ZohoCRM.D28;CData.QuickBooks.D28;CData.XeroWorkflowMax.D28;TMSVCLUIPackPkgExDXE14;dxPSdxFCLnkRS28;VCLTMSFNCBloxPkgDXE14;dxSpreadSheetCoreConditionalFormattingDialogsRS28;AdvChartDXE14;vclimg;DataSnapFireDAC;TMSVCLUIPackPkgXlsDXE14;JvDlgs;CData.Square.D28;CData.GoogleContacts.D28;xdata;CData.Gmail.D28;CData.FTP.D28;dxPScxTLLnkRS28;DBXInformixDriver;DataSnapNativeClient;fmxobj;bindcompvclsmp;dxFlowChartRS28;TMSScripter_Memo;CData.GoogleSheets.D28;CData.Office365.D28;FlexCel_Report;emshosting;TMSCryptoPkgDEDXE14;dxPScxVGridLnkRS28;FireDACCommonDriver;TMSMQTTPkgDXE14;IndyIPClient;VCLTMSFNCWXPackPkgDXE14;TMSVCLPluginFrameworkPkgMgrDXE14;CData.SugarCRM.D28;emsedge;CData.SuiteCRM.D28;GraphQLHttp;inetdb;CData.AmazonDynamoDB.D28;cxSchedulerTreeBrowserRS28;dxTabbedMDIRS28;dxRichEditInplaceRS28;fmxFireDAC;CData.MarkLogic.D28;CData.Box.D28;dxPSdxLCLnkRS28;JvPascalInterpreter;CData.WordPress.D28;DBXOdbcDriver;JvTimeFramework;dbrtl;FireDACOracleDriver;Skia.Package.FMX;ComPortDrv;CData.Reckon.D28;GraphQLCore;TeeDB;TMSVCLIWPkgDXE14;FireDACMSAccDriver;dxPSLnksRS28;CData.Excel.D28;TMSWorkflow;FMXTMSFNCAppToolsPkgDXE14;DataSnapConnectors;CData.WooCommerce.D28;CData.MicrosoftPlanner.D28;FireDACMongoDBDriver;FireDACTDataDriver;CData.Teradata.D28;Skia.Package.VCL;CData.REST.D28;cxSchedulerRS28;TMSVCLPluginFrameworkPkgCoreDXE14;dxRibbonRS28;FlexCel_Core;dxFlowChartLayoutsRS28;dxdborRS28;bindcomp;TMSVCLIWPkgDEDXE14;dxPScxGridLnkRS28;IndyCore;dmvcframeworkDT;RESTBackendComponents;CData.FreshBooks.D28;dxBarExtDBItemsRS28;TMSCryptoPkgDXE14;dxRichEditCoreRS28;dxFlowChartAdvancedCustomizeFormRS28;CData.ActCRM.D28;FireDACADSDriver;MobilePermissions;CData.Wasabi.D28;RESTComponents;TMSPassKitPkgDEDXE14;IndyIPServer;dsnapxml;adortl;dxPSTeeChartRS28;dsnapcon;TMSVCLUIPackPkgWizDXE14;DataSnapProviderClient;DBXDb2Driver;IcsCommonD110Run;cxGridRS28;dxSpellCheckerRS28;Gorilla3D_Delphi_11_1_0_Alexandria;dmvcframeworkRT;CData.GoogleSearch.D28;FMXTMSFNCCloudPackPkgDXE14;dxMapControlRS28;CData.Smartsheet.D28;DBXSybaseASADriver;CData.MailChimp.D28;CData.Avalara.D28;FMXTee;CData.Shopify.D28;soaprtl;JvNet;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
+        <DCC_ExeOutput>web</DCC_ExeOutput>
+        <DCC_UnitSearchPath>src;../../__share;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <TMSWebOutputPath>web</TMSWebOutputPath>
+        <DCC_DcuOutput>trash</DCC_DcuOutput>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>dxPSdxSpreadSheetLnkRS28;CData.Couchbase.D28;CData.Facebook.D28;CData.MSTeams.D28;bindengine;IndyIPCommon;vclie;CData.Salesforce.D28;FMX_FlexCel_Components;dxPSPrVwRibbonRS28;dxHttpIndyRequestRS28;CData.Basecamp.D28;dxPSdxDBOCLnkRS28;dbxcds;vcledge;cxPivotGridOLAPRS28;dxGDIPlusRS28;CData.ApacheHBase.D28;CData.YouTubeAnalytics.D28;CData.Twitter.D28;FlexCel_Pdf;CData.SageBCAccounting.D28;dxPSCoreRS28;dxSkinsCoreRS28;CData.GoogleBigQuery.D28;TMSScripter_IDE;dxADOServerModeRS28;dxWizardControlRS28;CData.BullhornCRM.D28;dbexpress;CData.SalesforceChatter.D28;inet;CData.JIRA.D28;vcltouch;PythonVcl;FMX_FlexCel_Core;FireDACDBXDriver;dxSpreadSheetCoreDialogsRS28;dxPScxCommonRS28;dxNavBarRS28;CustomIPTransport;FireDACMSSQLDriver;VCL_FlexCel_Core;dxSpreadSheetReportDesignerRS28;dxFireDACEMFRS28;CData.OneNote.D28;dxComnRS28;dxFlowChartDesignerRS28;CData.Cassandra.D28;CData.Tally.D28;CData.RSS.D28;FMXTMSFNCUIPackPkgDXE14;dxmdsRS28;CData.Dropbox.D28;dxPScxSchedulerLnkRS28;CData.ZohoBooks.D28;vclFireDAC;FireDACODBCDriver;dxADOEMFRS28;emsserverresource;CData.Instagram.D28;CData.Zendesk.D28;rtl;dxDockingRS28;IcsFmxD110Run;dxPDFViewerRS28;IcsVclD110Run;DBXSqliteDriver;dxBarExtItemsRS28;VirtualTreesDR;dxorgcRS28;DBXSybaseASEDriver;CData.AmazonS3.D28;dxPSRichEditControlLnkRS28;CData.BigCommerce.D28;inetdbxpress;FireDAC;xmlrtl;CData.GoogleDirectory.D28;ibxpress;dsnap;FireDACDb2Driver;DBXOracleDriver;CData.Airtable.D28;cxSchedulerRibbonStyleEventEditorRS28;vclib;dxPScxPCProdRS28;DatasnapConnectorsFreePascal;Spring.Data;CData.Highrise.D28;CData.SFTP.D28;CData.Trello.D28;TMSLogging;CData.LinkedIn.D28;FMXTMSFNCMapsPkgDXE14;dxRichEditDocumentModelRS28;dxPSdxMapControlLnkRS28;dxPScxPivotGridLnkRS28;CData.Bugzilla.D28;dxCloudServiceLibraryRS28;bindcompvclwinx;VCLTMSFNCUIPackPkgDXE14;bindcompfmx;VCLTMSFNCDashboardPackPkgDXE14;CData.FinancialForce.D28;TMSVCLUIPackPkgDXE14;dxPSdxPDFViewerLnkRS28;dxSpreadSheetCoreRS28;ibmonitor;CData.Asana.D28;CData.OpenExchangeRates.D28;FireDACASADriver;Tee;vclactnband;TMSScripter;CData.JSON.D28;dxFireDACServerModeRS28;FireDACInfxDriver;DBXMySQLDriver;VclSmp;AWSSDK;DataSnapCommon;CData.Xero.D28;fmxase;VCLTMSFNCMapsPkgDXE14;dxdbtrRS28;CData.ExcelOnline.D28;TMSDiagram;FlexCel_XlsAdapter;CData.QuickBooksOnline.D28;DataSnapIndy10ServerTransport;DBXInterBaseDriver;vcldsnap;CData.PayPal.D28;dxSpreadSheetConditionalFormattingDialogsRS28;CData.AmazonMarketplace.D28;VCLTMSFNCCorePkgDXE14;vcldb;dxDBXServerModeRS28;CData.AzureTables.D28;CData.Redis.D28;CData.AuthorizeNet.D28;dxPScxExtCommonRS28;dxRichEditControlCoreRS28;CData.MariaDB.D28;CData.Bing.D28;CData.DigitalOcean.D28;cxPivotGridChartRS28;CData.SurveyMonkey.D28;cxTreeListdxBarPopupMenuRS28;CData.Kintone.D28;vcl;CData.AWSCostExplorer.D28;TMSScripter_Legacy;DataSnapClient;cxSchedulerWebServiceStorageRS28;dxtrmdRS28;CData.Odoo.D28;CData.GoogleDrive.D28;dxPSdxGaugeControlLnkRS28;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;TMSAnalyticsPkgDXE14;tethering;CData.FreshDesk.D28;bindcompvcl;dxEMFRS28;CloudService;CData.Stripe.D28;PythonFmx;soapserver;FireDACIBDriver;DataSnapServer;vclwinx;CData.OracleOci.D28;fmx;DbxCommonDriver;VCLRESTComponents;CData.EdgarOnline.D28;cxExportRS28;FireDACCommonODBC;DBXMSSQLDriver;emsclient;dxTileControlRS28;IndyProtocols;appanalytics;vclx;Skia.Package.RTL;CData.Quandl.D28;FmxTeeUI;DBXFirebirdDriver;SynEdit_R;cxPivotGridRS28;FireDACSqliteDriver;DbxClientDriver;dxSpreadSheetRS28;soapmidas;dxBarRS28;dxSpreadSheetInplaceRichEditRS28;TeeUI;Python;CData.XML.D28;dxServerModeRS28;VCLTMSFNCCloudPackPkgDXE14;cxTreeListRS28;CData.MongoDB.D28;FlexCel_dll;dxBarDBNavRS28;CData.Confluence.D28;CData.CSV.D28;fmxdae;CData.OneDrive.D28;CData.Email.D28;CData.Access.D28;TMSQueryStudio;CData.DocuSign.D28;CData.OData.D28;IndySystem;cxVerticalGridRS28;VCLTMSFNCChartPkgDXE14;ibxbindings;dxPSDBTeeChartRS28;dxPSdxOCLnkRS28;CData.MYOB.D28;dxRichEditControlRS28;FMXTMSFNCChartPkgDXE14;cxSchedulerGridRS28;dxPsPrVwAdvRS28;VCLTMSFNCAppToolsPkgDXE14;FMXTMSFNCCorePkgDXE14;FlexCel_Render;FireDACCommon;DataSnapServerMidas;CData.CosmosDB.D28;dxPSdxDBTVLnkRS28;CData.GoogleCalendar.D28;dxRibbonCustomizationFormRS28;TMSScripter_VCL;bindcompdbx;dxGaugeControlRS28;FireDACMySQLDriver;CData.Evernote.D28;TMSMemInsightPkgDXE14;VCL_FlexCel_Components;CData.SendGrid.D28;CData.ZohoCRM.D28;CData.QuickBooks.D28;CData.XeroWorkflowMax.D28;TMSVCLUIPackPkgExDXE14;dxPSdxFCLnkRS28;dxSpreadSheetCoreConditionalFormattingDialogsRS28;AdvChartDXE14;vclimg;DataSnapFireDAC;TMSVCLUIPackPkgXlsDXE14;CData.Square.D28;CData.GoogleContacts.D28;CData.Gmail.D28;CData.FTP.D28;dxPScxTLLnkRS28;DBXInformixDriver;DataSnapNativeClient;fmxobj;bindcompvclsmp;dxFlowChartRS28;TMSScripter_Memo;CData.GoogleSheets.D28;CData.Office365.D28;FlexCel_Report;emshosting;dxPScxVGridLnkRS28;FireDACCommonDriver;IndyIPClient;CData.SugarCRM.D28;emsedge;CData.SuiteCRM.D28;GraphQLHttp;inetdb;CData.AmazonDynamoDB.D28;cxSchedulerTreeBrowserRS28;dxTabbedMDIRS28;dxRichEditInplaceRS28;fmxFireDAC;CData.MarkLogic.D28;CData.Box.D28;dxPSdxLCLnkRS28;CData.WordPress.D28;DBXOdbcDriver;dbrtl;FireDACOracleDriver;Skia.Package.FMX;ComPortDrv;CData.Reckon.D28;GraphQLCore;TeeDB;TMSVCLIWPkgDXE14;FireDACMSAccDriver;dxPSLnksRS28;CData.Excel.D28;TMSWorkflow;FMXTMSFNCAppToolsPkgDXE14;DataSnapConnectors;CData.WooCommerce.D28;CData.MicrosoftPlanner.D28;FireDACMongoDBDriver;FireDACTDataDriver;CData.Teradata.D28;Skia.Package.VCL;CData.REST.D28;cxSchedulerRS28;dxRibbonRS28;FlexCel_Core;dxFlowChartLayoutsRS28;dxdborRS28;bindcomp;dxPScxGridLnkRS28;IndyCore;RESTBackendComponents;CData.FreshBooks.D28;dxBarExtDBItemsRS28;TMSCryptoPkgDXE14;dxRichEditCoreRS28;dxFlowChartAdvancedCustomizeFormRS28;CData.ActCRM.D28;FireDACADSDriver;CData.Wasabi.D28;RESTComponents;IndyIPServer;dsnapxml;adortl;dxPSTeeChartRS28;dsnapcon;DataSnapProviderClient;DBXDb2Driver;IcsCommonD110Run;cxGridRS28;dxSpellCheckerRS28;Gorilla3D_Delphi_11_1_0_Alexandria;CData.GoogleSearch.D28;FMXTMSFNCCloudPackPkgDXE14;dxMapControlRS28;CData.Smartsheet.D28;DBXSybaseASADriver;CData.MailChimp.D28;CData.Avalara.D28;FMXTee;CData.Shopify.D28;soaprtl;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <TMSWebDebugInfo>2</TMSWebDebugInfo>
+        <TMSWebDefines>$(TMSWebDefines);DEBUG</TMSWebDefines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <TMSWebBrowser>1</TMSWebBrowser>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <TMSWebObfuscation>2</TMSWebObfuscation>
+        <TMSWebOptimization>2</TMSWebOptimization>
+        <TMSWebDefines>$(TMSWebDefines);RELEASE</TMSWebDefines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="src\FLogin.pas">
+            <Form>frmLgin</Form>
+            <DesignClass>TWebForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\FSignUp.pas">
+            <Form>frmSignUp</Form>
+            <DesignClass>TWebForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\__share\SweetAlerts.pas"/>
+        <DCCReference Include="src\UwebDM.pas">
+            <Form>webDM</Form>
+            <DesignClass>TWebDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\FDashBoard.pas">
+            <Form>frmDashBoard</Form>
+            <DesignClass>TWebForm</DesignClass>
+        </DCCReference>
+        <None Include="qualiBase.html"/>
+        <None Include="src\bootstrap.min.css"/>
+        <None Include="src\bootstrap.bundle.min.js"/>
+        <None Include="templates\dashboard_principal\.DS_Store"/>
+        <None Include="templates\dashboard_principal\.github\workflows\main.yml"/>
+        <None Include="templates\dashboard_principal\.gitignore"/>
+        <None Include="templates\dashboard_principal\assets\css\argon-dashboard.css"/>
+        <None Include="templates\dashboard_principal\assets\css\argon-dashboard.css.map"/>
+        <None Include="templates\dashboard_principal\assets\css\argon-dashboard.min.css"/>
+        <None Include="templates\dashboard_principal\assets\css\nucleo-icons.css"/>
+        <None Include="templates\dashboard_principal\assets\css\nucleo-svg.css"/>
+        <None Include="templates\dashboard_principal\assets\fonts\nucleo-icons.eot"/>
+        <None Include="templates\dashboard_principal\assets\fonts\nucleo-icons.svg"/>
+        <RcItem Include="templates\dashboard_principal\assets\fonts\nucleo-icons.ttf">
+            <ResourceType>FONT</ResourceType>
+            <ResourceId>1</ResourceId>
+        </RcItem>
+        <None Include="templates\dashboard_principal\assets\fonts\nucleo-icons.woff"/>
+        <None Include="templates\dashboard_principal\assets\fonts\nucleo-icons.woff2"/>
+        <None Include="templates\dashboard_principal\assets\fonts\nucleo.eot"/>
+        <RcItem Include="templates\dashboard_principal\assets\fonts\nucleo.ttf">
+            <ResourceType>FONT</ResourceType>
+            <ResourceId>2</ResourceId>
+        </RcItem>
+        <None Include="templates\dashboard_principal\assets\fonts\nucleo.woff"/>
+        <None Include="templates\dashboard_principal\assets\fonts\nucleo.woff2"/>
+        <RcItem Include="templates\dashboard_principal\assets\img\apple-icon.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_1</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\bg-profile.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_1</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\bg1.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_2</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\bruce-mars.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_3</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\carousel-1.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_4</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\carousel-2.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_5</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\carousel-3.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_6</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved-10.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_7</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved-11.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_8</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved-6.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_9</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved-8.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_10</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved0.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_11</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved1.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_12</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved10.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_13</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved11-small.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_14</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved11.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_15</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved12.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_16</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved13.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_17</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved14.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_18</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved19.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_19</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved2.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_20</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved21.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_21</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved3.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_22</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved4.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_23</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved5-small.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_24</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved5.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_25</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved6-small.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_26</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved6.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_27</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved7.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_28</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved8.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_29</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\curved9.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_30</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\curved-images\white-curved.jpeg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_31</ResourceId>
+        </RcItem>
+        <None Include="templates\dashboard_principal\assets\img\down-arrow-dark.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\down-arrow-white.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\down-arrow.svg"/>
+        <RcItem Include="templates\dashboard_principal\assets\img\favicon.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_2</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\home-decor-1.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_32</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\home-decor-2.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_33</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\home-decor-3.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_34</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\icons\flags\AU.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_3</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\icons\flags\BR.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_4</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\icons\flags\DE.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_5</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\icons\flags\GB.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_6</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\icons\flags\US.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_7</ResourceId>
+        </RcItem>
+        <None Include="templates\dashboard_principal\assets\img\illustrations\icon-documentation.svg"/>
+        <RcItem Include="templates\dashboard_principal\assets\img\illustrations\rocket-white.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_8</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\ivana-square.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_35</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\ivancik.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_36</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\kal-visuals-square.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_37</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\logo-ct-dark.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_9</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\logo-ct.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_10</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\logos\mastercard.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_11</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\logos\visa.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_12</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\marie.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_38</ResourceId>
+        </RcItem>
+        <None Include="templates\dashboard_principal\assets\img\shapes\pattern-lines.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\shapes\shape-1.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\shapes\shape-2.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\shapes\shape-3.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\shapes\wave-down.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\shapes\wave-up.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\shapes\waves-gray.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\shapes\waves-white.svg"/>
+        <RcItem Include="templates\dashboard_principal\assets\img\small-logos\icon-sun-cloud.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_13</ResourceId>
+        </RcItem>
+        <None Include="templates\dashboard_principal\assets\img\small-logos\logo-atlassian.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\small-logos\logo-invision.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\small-logos\logo-jira.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\small-logos\logo-slack.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\small-logos\logo-spotify.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\small-logos\logo-webdev.svg"/>
+        <None Include="templates\dashboard_principal\assets\img\small-logos\logo-xd.svg"/>
+        <RcItem Include="templates\dashboard_principal\assets\img\team-1.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_39</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\team-2.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_40</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\team-3.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_41</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\team-4.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_42</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\angular.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_43</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\bootstrap.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_44</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\dribbble.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_14</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\dropbox.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_15</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\mastercard.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_16</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\paypal.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_17</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\react.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_45</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\sketch.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_46</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\slack.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_18</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\spotify.jpeg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_47</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\tim.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_19</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\unass.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_48</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\visa.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>PngImage_20</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\theme\vue.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_49</ResourceId>
+        </RcItem>
+        <RcItem Include="templates\dashboard_principal\assets\img\vr-bg.jpg">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>JpgImage_50</ResourceId>
+        </RcItem>
+        <None Include="templates\dashboard_principal\assets\js\argon-dashboard.js"/>
+        <None Include="templates\dashboard_principal\assets\js\argon-dashboard.js.map"/>
+        <None Include="templates\dashboard_principal\assets\js\argon-dashboard.min.js"/>
+        <None Include="templates\dashboard_principal\assets\js\core\bootstrap.bundle.min.js"/>
+        <None Include="templates\dashboard_principal\assets\js\core\bootstrap.min.js"/>
+        <None Include="templates\dashboard_principal\assets\js\core\popper.min.js"/>
+        <None Include="templates\dashboard_principal\assets\js\plugins\bootstrap-notify.js"/>
+        <None Include="templates\dashboard_principal\assets\js\plugins\Chart.extension.js"/>
+        <None Include="templates\dashboard_principal\assets\js\plugins\chartjs.min.js"/>
+        <None Include="templates\dashboard_principal\assets\js\plugins\perfect-scrollbar.min.js"/>
+        <None Include="templates\dashboard_principal\assets\js\plugins\smooth-scrollbar.min.js"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap-grid.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap-reboot.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap-utilities.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_floating-labels.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-check.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-control.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-range.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-select.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-text.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_input-group.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_labels.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_validation.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_clearfix.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_color-bg.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_colored-links.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_position.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_ratio.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_stacks.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_stretched-link.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_text-truncation.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_visually-hidden.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_vr.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_alert.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_backdrop.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_border-radius.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_box-shadow.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_breakpoints.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_buttons.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_caret.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_clearfix.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_color-scheme.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_container.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_deprecate.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_forms.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_gradients.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_grid.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_image.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_list-group.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_lists.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_pagination.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_reset-text.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_resize.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_table-variants.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_text-truncate.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_transition.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_utilities.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_visually-hidden.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\utilities\_api.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\vendor\_rfs.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_accordion.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_alert.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_badge.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_breadcrumb.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_button-group.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_buttons.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_card.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_carousel.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_close.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_containers.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_dropdown.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_forms.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_functions.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_grid.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_helpers.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_images.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_list-group.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_maps.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_mixins.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_modal.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_nav.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_navbar.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_offcanvas.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_pagination.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_placeholders.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_popover.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_progress.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_reboot.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_root.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_spinners.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_tables.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_toasts.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_tooltip.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_transitions.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_type.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_utilities.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_variables.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\cards\card-background.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\cards\card-carousel.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\custom\_styles.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\custom\_variables.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_form-check.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_form-select.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_form-switch.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_forms.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_input-group.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_inputs.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_labels.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\mixins.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_badge.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_colored-shadows.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_hover.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_social-buttons.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\plugins.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_flatpickr.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_nouislider.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_perfect-scrollbar.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_prism.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\theme.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_animations.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_avatars.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_badge.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_breadcrumb.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_cards-extend.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_cards.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_choices.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_dark-version.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_dropdowns.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_fixed-plugin.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_form-switch.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_full-calendar.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_header.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_info-areas.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_misc-extend.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_misc.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_navbar-vertical.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_navbar.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_pagination.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_rtl.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_social-buttons.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_table.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_timeline.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_utilities-extend.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_utilities.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_virtual-reality.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_alert.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_avatars.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_badge.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_breadcrumbs.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_buttons.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_cards.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_dark-version.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_dropdown.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_dropup.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_fixed-plugin.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_footer.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_forms.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_gradients.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_header.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_info-areas.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_misc.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_nav.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_navbar-vertical.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_navbar.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_pagination.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_popovers.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_progress.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_rtl.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_social-buttons.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_tables.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_tilt.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_timeline.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_tooltips.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_typography.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_utilities-extend.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_utilities.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard\_variables.scss"/>
+        <None Include="templates\dashboard_principal\assets\scss\argon-dashboard.scss"/>
+        <None Include="templates\dashboard_principal\CHANGELOG.md"/>
+        <None Include="templates\dashboard_principal\gulpfile.js"/>
+        <None Include="templates\dashboard_principal\ISSUE_TEMPLATE.md"/>
+        <None Include="templates\dashboard_principal\LICENSE.md"/>
+        <None Include="templates\dashboard_principal\package.json"/>
+        <None Include="templates\dashboard_principal\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\buttons-handlers.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\constants.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\globalState.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\instanceMethods.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\keydown-handler.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\popup-click-handler.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\privateMethods.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\privateProps.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\staticMethods.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\SweetAlert.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\sweetalert2.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\sweetalert2.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\types.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\src\variables.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\.github\FUNDING.yml"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\.github\ISSUE_TEMPLATE\01_bug_report.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\.github\ISSUE_TEMPLATE\02_feature_request.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\.github\ISSUE_TEMPLATE\03_question.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\.github\workflows\ci.yml"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\.npmignore"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\.stylelintrc.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\app.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\bootstrap-4\bootstrap-4.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\bootstrap-4\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\bootstrap-4\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\borderless\borderless.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\borderless\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\borderless\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\bulma\bulma.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\bulma\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\bulma\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\CHANGELOG.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\dark\dark.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\dark\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\dark\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\default\default.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\default\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\default\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\gulpfile.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\index.html"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\LICENSE"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\material-ui\material-ui.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\material-ui\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\material-ui\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\minimal\minimal.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\minimal\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\minimal\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\release.config.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\tools\create-new-theme.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\tools\publish-all-themes.js"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\animations.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\package.json"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\README.md"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\wordpress-admin.scss"/>
+        <None Include="templates\dashboard_principal\sweetalert2\themes\yarn.lock"/>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Application</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">qualiBase.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Ivan\AppData\Local\tmssoftware\registered\TMS Sparkle\packages\d11\.\Win32\Release\dclsparkle280.bpl">TMS Sparkle - Design-Time Package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Ivan\AppData\Local\tmssoftware\registered\TMS RemoteDB\packages\d11\.\Win32\Release\dclremotedb280.bpl">TMS RemoteDB - Design-Time Package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Ivan\AppData\Local\tmssoftware\registered\TMS XData\packages\d11\.\Win32\Release\dclxdata280.bpl">TMS XData - Design-Time Package</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Deployment Version="4">
+                <DeployFile LocalName="$(BDS)\bin64\dbxadapter.dll" Configuration="Debug" Class="File">
+                    <Platform Name="Win64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin64\dbxadapter.dll" Configuration="Release" Class="File">
+                    <Platform Name="Win64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\dbxadapter.dll" Configuration="Debug" Class="File">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\dbxadapter.dll" Configuration="Release" Class="File">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx32\libsqladapter.dylib" Configuration="Debug" Class="File">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx32\libsqladapter.dylib" Configuration="Debug" Class="File">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx32\libsqladapter.dylib" Configuration="Release" Class="File">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx32\libsqladapter.dylib" Configuration="Release" Class="File">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx64\libsqladapter.dylib" Configuration="Debug" Class="File">
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx64\libsqladapter.dylib" Configuration="Debug" Class="File">
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx64\libsqladapter.dylib" Configuration="Release" Class="File">
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\redist\osx64\libsqladapter.dylib" Configuration="Release" Class="File">
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="qualiBase.html" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="src\bootstrap.bundle.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="src\bootstrap.min.css" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\.DS_Store" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\.github\workflows\main.yml" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\.gitignore" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\css\argon-dashboard.css.map" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\css\argon-dashboard.css" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\css\argon-dashboard.min.css" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\css\nucleo-icons.css" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\css\nucleo-svg.css" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo-icons.eot" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo-icons.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo-icons.ttf" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo-icons.woff2" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo-icons.woff" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo.eot" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo.ttf" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo.woff2" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\fonts\nucleo.woff" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\apple-icon.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\bg-profile.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\bg1.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\bruce-mars.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\carousel-1.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\carousel-2.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\carousel-3.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved-10.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved-11.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved-6.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved-8.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved0.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved1.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved10.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved11-small.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved11.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved12.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved13.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved14.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved19.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved2.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved21.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved3.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved4.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved5-small.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved5.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved6-small.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved6.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved7.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved8.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\curved9.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\curved-images\white-curved.jpeg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\down-arrow-dark.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\down-arrow-white.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\down-arrow.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\favicon.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\home-decor-1.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\home-decor-2.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\home-decor-3.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\icons\flags\AU.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\icons\flags\BR.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\icons\flags\DE.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\icons\flags\GB.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\icons\flags\US.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\illustrations\icon-documentation.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\illustrations\rocket-white.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\ivana-square.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\ivancik.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\kal-visuals-square.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\logo-ct-dark.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\logo-ct.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\logos\mastercard.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\logos\visa.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\marie.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\pattern-lines.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\shape-1.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\shape-2.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\shape-3.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\wave-down.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\wave-up.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\waves-gray.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\shapes\waves-white.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\icon-sun-cloud.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\logo-atlassian.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\logo-invision.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\logo-jira.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\logo-slack.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\logo-spotify.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\logo-webdev.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\small-logos\logo-xd.svg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\team-1.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\team-2.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\team-3.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\team-4.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\angular.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\bootstrap.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\dribbble.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\dropbox.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\mastercard.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\paypal.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\react.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\sketch.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\slack.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\spotify.jpeg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\tim.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\unass.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\visa.png" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\theme\vue.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\img\vr-bg.jpg" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\argon-dashboard.js.map" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\argon-dashboard.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\argon-dashboard.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\core\bootstrap.bundle.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\core\bootstrap.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\core\popper.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\plugins\bootstrap-notify.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\plugins\Chart.extension.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\plugins\chartjs.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\plugins\perfect-scrollbar.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\js\plugins\smooth-scrollbar.min.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap-grid.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap-reboot.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap-utilities.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\bootstrap.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_floating-labels.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-check.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-control.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-range.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-select.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_form-text.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_input-group.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_labels.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\forms\_validation.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_clearfix.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_color-bg.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_colored-links.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_position.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_ratio.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_stacks.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_stretched-link.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_text-truncation.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_visually-hidden.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\helpers\_vr.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_alert.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_backdrop.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_border-radius.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_box-shadow.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_breakpoints.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_buttons.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_caret.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_clearfix.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_color-scheme.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_container.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_deprecate.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_forms.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_gradients.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_grid.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_image.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_list-group.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_lists.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_pagination.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_reset-text.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_resize.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_table-variants.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_text-truncate.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_transition.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_utilities.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\mixins\_visually-hidden.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\utilities\_api.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\vendor\_rfs.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_accordion.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_alert.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_badge.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_breadcrumb.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_button-group.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_buttons.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_card.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_carousel.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_close.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_containers.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_dropdown.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_forms.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_functions.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_grid.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_helpers.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_images.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_list-group.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_maps.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_mixins.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_modal.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_nav.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_navbar.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_offcanvas.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_pagination.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_placeholders.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_popover.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_progress.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_reboot.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_root.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_spinners.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_tables.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_toasts.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_tooltip.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_transitions.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_type.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_utilities.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\bootstrap\_variables.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\cards\card-background.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\cards\card-carousel.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\custom\_styles.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\custom\_variables.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_form-check.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_form-select.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_form-switch.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_forms.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_input-group.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_inputs.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\forms\_labels.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\mixins.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_badge.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_colored-shadows.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_hover.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\mixins\_social-buttons.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\plugins.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_flatpickr.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_nouislider.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_perfect-scrollbar.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\plugins\free\_prism.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\theme.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_animations.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_avatars.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_badge.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_breadcrumb.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_cards-extend.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_cards.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_choices.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_dark-version.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_dropdowns.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_fixed-plugin.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_form-switch.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_full-calendar.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_header.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_info-areas.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_misc-extend.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_misc.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_navbar-vertical.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_navbar.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_pagination.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_rtl.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_social-buttons.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_table.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_timeline.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_utilities-extend.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_utilities.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\variables\_virtual-reality.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_alert.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_avatars.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_badge.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_breadcrumbs.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_buttons.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_cards.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_dark-version.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_dropdown.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_dropup.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_fixed-plugin.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_footer.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_forms.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_gradients.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_header.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_info-areas.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_misc.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_nav.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_navbar-vertical.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_navbar.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_pagination.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_popovers.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_progress.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_rtl.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_social-buttons.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_tables.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_tilt.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_timeline.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_tooltips.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_typography.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_utilities-extend.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_utilities.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\assets\scss\argon-dashboard\_variables.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\CHANGELOG.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\gulpfile.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\ISSUE_TEMPLATE.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\LICENSE.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\buttons-handlers.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\constants.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\globalState.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\instanceMethods.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\keydown-handler.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\popup-click-handler.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\privateMethods.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\privateProps.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\staticMethods.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\SweetAlert.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\sweetalert2.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\sweetalert2.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\types.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\src\variables.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\.github\FUNDING.yml" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\.github\ISSUE_TEMPLATE\01_bug_report.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\.github\ISSUE_TEMPLATE\02_feature_request.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\.github\ISSUE_TEMPLATE\03_question.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\.github\workflows\ci.yml" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\.npmignore" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\.stylelintrc.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\app.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\bootstrap-4\bootstrap-4.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\bootstrap-4\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\bootstrap-4\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\borderless\borderless.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\borderless\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\borderless\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\bulma\bulma.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\bulma\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\bulma\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\CHANGELOG.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\dark\dark.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\dark\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\dark\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\default\default.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\default\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\default\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\gulpfile.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\index.html" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\LICENSE" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\material-ui\material-ui.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\material-ui\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\material-ui\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\minimal\minimal.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\minimal\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\minimal\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\release.config.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\tools\create-new-theme.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\tools\publish-all-themes.js" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\animations.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\package.json" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\README.md" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\wordpress-admin\wordpress-admin.scss" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="templates\dashboard_principal\sweetalert2\themes\yarn.lock" Configuration="Debug" Class="ProjectFile"/>
+                <DeployFile LocalName="web\qualiBase.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClasses">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidFileProvider">
+                    <Platform Name="Android">
+                        <RemoteDir>res\xml</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\xml</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiv7aFile">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput_Android32">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStylesV21">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_Colors">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon192">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon24">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_Strings">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iOS_AppStore1024">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_AppIcon152">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_AppIcon167">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_LaunchDark2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Notification40">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Setting58">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_SpotLight80">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_AppIcon120">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_AppIcon180">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch3x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_LaunchDark2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_LaunchDark3x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Notification40">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Notification60">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Setting58">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Setting87">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Spotlight120">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Spotlight80">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements">
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSInfoPList">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSLaunchScreen">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXDebug">
+                    <Platform Name="OSX64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXEntitlements">
+                    <Platform Name="OSX32">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXInfoPList">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Linux64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOutput_Android32">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectUWPManifest">
+                    <Platform Name="Win32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSSimARM64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+            </Deployment>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>

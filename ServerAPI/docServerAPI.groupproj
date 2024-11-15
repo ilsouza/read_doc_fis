@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EB9589A9-DE7F-4C16-8788-06CA32ADA708}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="docFis_FMXConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="docFis_FMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="mod_docfis.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web\docFis_Web.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="docFis_FMXConsole">
+        <MSBuild Projects="docFis_FMXConsole.dproj"/>
+    </Target>
+    <Target Name="docFis_FMXConsole:Clean">
+        <MSBuild Projects="docFis_FMXConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="docFis_FMXConsole:Make">
+        <MSBuild Projects="docFis_FMXConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="docFis_FMX">
+        <MSBuild Projects="docFis_FMX.dproj"/>
+    </Target>
+    <Target Name="docFis_FMX:Clean">
+        <MSBuild Projects="docFis_FMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="docFis_FMX:Make">
+        <MSBuild Projects="docFis_FMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="mod_docfis">
+        <MSBuild Projects="mod_docfis.dproj"/>
+    </Target>
+    <Target Name="mod_docfis:Clean">
+        <MSBuild Projects="mod_docfis.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="mod_docfis:Make">
+        <MSBuild Projects="mod_docfis.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="docFis_Web">
+        <MSBuild Projects="..\Web\docFis_Web.dproj"/>
+    </Target>
+    <Target Name="docFis_Web:Clean">
+        <MSBuild Projects="..\Web\docFis_Web.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="docFis_Web:Make">
+        <MSBuild Projects="..\Web\docFis_Web.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="docFis_FMXConsole;docFis_FMX;mod_docfis;docFis_Web"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="docFis_FMXConsole:Clean;docFis_FMX:Clean;mod_docfis:Clean;docFis_Web:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="docFis_FMXConsole:Make;docFis_FMX:Make;mod_docfis:Make;docFis_Web:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

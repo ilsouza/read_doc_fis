@@ -1,0 +1,73 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 350
+  ClientWidth = 582
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object panTop: TPanel
+    Align = Top
+    Size.Width = 582.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lblStatus: TLabel
+      Align = Client
+      AutoSize = True
+      Size.Width = 582.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Server NOT STARTED'
+      TabOrder = 0
+    end
+  end
+  object panBottom: TPanel
+    Align = Bottom
+    Position.Y = 309.000000000000000000
+    Size.Width = 582.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnConnect: TButton
+      Align = Right
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 414.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 165.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'CONNECT'
+      OnClick = btnConnectClick
+    end
+  end
+  object panLog: TPanel
+    Align = Client
+    Size.Width = 582.000000000000000000
+    Size.Height = 268.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object memLog: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 572.000000000000000000
+      Size.Height = 258.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 568.000000000000000000
+      Viewport.Height = 254.000000000000000000
+    end
+  end
+end
